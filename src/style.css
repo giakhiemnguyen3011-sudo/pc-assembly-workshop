@@ -56,21 +56,52 @@ html, body { width: 100%; height: 100%; overflow: hidden; background: #0b0e14; f
   background: rgba(0,0,0,.55);
 }
 .inv-card {
-  width: min(560px, 92vw); max-height: 80vh; overflow: auto;
-  background: #0f172a; border: 1px solid #475569; border-radius: 16px; padding: 20px;
+  width: min(720px, 94vw); max-height: 88vh; overflow: auto;
+  background: #0f172a; border: 1px solid #475569; border-radius: 16px; padding: 22px;
 }
 .inv-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
 .inv-header h2 { font-size: 20px; }
 #inv-close { background: #334155; color: #fff; border: none; padding: 8px 12px; border-radius: 8px; cursor: pointer; }
 #inv-close:hover { background: #475569; }
 .inv-hint { color: #94a3b8; font-size: 13px; margin-bottom: 12px; }
-#inv-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
-.inv-item {
-  background: #1e293b; border: 1px solid #475569; border-radius: 10px; padding: 10px; text-align: center;
+
+/* Nửa trên: ô vuông preview + khung mô tả chữ nhật */
+.inv-top { display: flex; gap: 14px; margin-bottom: 14px; }
+#inv-preview {
+  width: 190px; height: 190px; flex-shrink: 0;
+  background: #1e293b; border: 2px solid #475569; border-radius: 14px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
 }
-.inv-item .dot { width: 100%; height: 46px; border-radius: 8px; margin-bottom: 8px; }
-.inv-item .name { font-weight: 700; font-size: 14px; margin-bottom: 8px; }
-.inv-item button { background: #22c55e; border: none; padding: 6px 10px; border-radius: 8px; cursor: pointer; font-weight: 700; }
+#inv-preview-icon { font-size: 72px; line-height: 1; filter: drop-shadow(0 4px 8px rgba(0,0,0,.5)); }
+#inv-preview-name { font-weight: 700; font-size: 14px; text-align: center; padding: 0 8px; }
+#inv-desc {
+  flex: 1; min-height: 190px;
+  background: #1e293b; border: 1px solid #475569; border-radius: 14px; padding: 14px 16px;
+  display: flex; flex-direction: column; gap: 8px;
+}
+#inv-desc-title { font-size: 18px; font-weight: 800; }
+#inv-desc-tag {
+  align-self: flex-start; font-size: 12px; font-weight: 800; letter-spacing: 1px;
+  color: #0b0e14; padding: 3px 10px; border-radius: 20px;
+}
+#inv-desc-text { color: #cbd5e1; font-size: 14px; line-height: 1.55; flex: 1; }
+#inv-take {
+  align-self: flex-start; background: #22c55e; border: none; padding: 9px 22px;
+  border-radius: 9px; cursor: pointer; font-weight: 800; font-size: 15px; color: #052e16;
+}
+#inv-take:hover:not(:disabled) { background: #4ade80; }
+#inv-take:disabled { background: #334155; color: #64748b; cursor: not-allowed; }
+
+/* Nửa dưới: lưới ô vuông nhỏ */
+.inv-bottom-label { font-size: 12px; font-weight: 800; letter-spacing: 2px; color: #64748b; margin-bottom: 8px; }
+#inv-slots { display: grid; grid-template-columns: repeat(auto-fill, minmax(72px, 1fr)); gap: 10px; }
+.inv-slot {
+  aspect-ratio: 1; border: 2px solid #475569; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 34px; cursor: pointer; transition: transform .1s;
+}
+.inv-slot:hover { transform: scale(1.06); }
+.inv-slot.selected { outline: 3px solid #4ade80; outline-offset: 2px; }
 #inv-empty { color: #64748b; text-align: center; padding: 18px; }
 
 @media (max-width: 640px) {

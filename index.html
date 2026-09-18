@@ -52,9 +52,24 @@
             <h2>🎒 Túi đồ (Inventory)</h2>
             <button id="inv-close">✕ Đóng (E)</button>
           </div>
-          <p class="inv-hint">Click phải ngoài game để cất đồ vào túi. Ở đây bấm “Cầm” để lấy ra tay.</p>
-          <div id="inv-grid"></div>
-          <div id="inv-empty">Túi trống — hãy nhìn vào linh kiện và Click trái để nhặt.</div>
+          <p class="inv-hint">Click phải ngoài game để cất đồ vào túi. Bấm vào ô bên dưới để xem chi tiết, rồi bấm “Cầm lên”.</p>
+          <!-- Nửa trên: preview vuông + mô tả chữ nhật -->
+          <div class="inv-top">
+            <div id="inv-preview">
+              <div id="inv-preview-icon">🎒</div>
+              <div id="inv-preview-name">Túi trống</div>
+            </div>
+            <div id="inv-desc">
+              <div id="inv-desc-title">Chưa chọn vật phẩm</div>
+              <div id="inv-desc-tag" class="hidden">TAG</div>
+              <div id="inv-desc-text">Hãy nhìn vào linh kiện trong xưởng và Click trái để nhặt, sau đó Click phải để cất vào túi.</div>
+              <button id="inv-take" disabled>Cầm lên</button>
+            </div>
+          </div>
+          <!-- Nửa dưới: lưới ô vuông -->
+          <div class="inv-bottom-label">CÁC Ô ĐỒ TRONG TÚI</div>
+          <div id="inv-slots"></div>
+          <div id="inv-empty">Túi trống — hãy nhặt linh kiện ngoài xưởng.</div>
         </div>
       </div>
     </div>

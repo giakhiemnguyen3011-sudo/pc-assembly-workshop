@@ -1,0 +1,11 @@
+Model Information:
+* title:	Simple Motherboard
+* source:	https://sketchfab.com/3d-models/simple-motherboard-d901a7a43f1f48efb81be57822c4496a
+* author:	Rizki Achmad (https://sketchfab.com/rizkiachmad)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Simple Motherboard" (https://sketchfab.com/3d-models/simple-motherboard-d901a7a43f1f48efb81be57822c4496a) by Rizki Achmad (https://sketchfab.com/rizkiachmad) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
